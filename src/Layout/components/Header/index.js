@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind'
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faSpinner,faMagnifyingGlass,faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import image from '../../../assets/images';
 
 
@@ -16,13 +15,13 @@ function Header(){
                 <img src={image.logo} alt='tiktok'/>
             </div>
             <div className={cx('search')}>
-                <input placeholder='tìm kiếm...' spellCheck={false}/>
+                <input placeholder='Search...' spellCheck={false}/>
                 <button className={cx('clear')}>
-                    <FontAwesomeIcon icon={faGithub}/>
+                    <FontAwesomeIcon icon={faCircleXmark}/>
                 </button>
-                <FontAwesomeIcon className={cx('loading')} icon={faUser}/>
+                <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>
                 <button className={cx('search-btn')}>
-                    <FontAwesomeIcon icon={faGithub}/>
+                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
                 </button>
             </div>
             <div className={cx('actions')}>
